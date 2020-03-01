@@ -99,3 +99,17 @@ ws          =   2*pi*f;
 
 L           =   pi / (beta2_3 * ws^2);
 
+
+%%
+
+freq_min = 10e9;  %Hz
+w_min = 2*pi*freq_min; %rad/s
+lambda_min = c/freq_min;
+
+beta2 = - pi/(L * w_min^2);
+disp(["beta2 = ", beta2]);
+
+D = ((-2*pi*c)/(lambda_min^2)) * beta2; %s/(m^2)
+disp(["D =  ", D, "s/(m^2)\n"]);
+
+D_smf = D * 10^6; %REVISAR, YA QUE ESTAMOS USANDO C CORREGIDA

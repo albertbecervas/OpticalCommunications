@@ -83,6 +83,8 @@ disp('===================================');
 % compensar la dispersi�n de 25km de fibra SMF con una tasa de bits de
 % 40Gb/s (par�metros por defecto en A1.vtmu).
 
+D   =   0;      % TODO
+
 % Exemple params (13th file; page 3/5)
 
 Lambda  =   1550;                           % [nm]
@@ -90,12 +92,8 @@ D       =   18;                             % [ps/(nm*km)]
 f       =   40e-3;                          % [THz]
 c       =   physconst('LightSpeed') / 1e3;  % [nm/ps]
 
-% Expected result -> L = 2166 m.
-
-% ================================================
-
 beta2_3     =   (Lambda^2 * abs(D)) / (2*pi*c);
-ws          =   2*pi*f;
+ws          =   2*pi*;
 
 L           =   pi / (beta2_3 * ws^2);
 
